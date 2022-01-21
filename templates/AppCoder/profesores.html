@@ -1,0 +1,12 @@
+{ {% extends 'AppCoder/padre.html' %}}
+
+{% block contenidoQueCambia %}
+
+    <h3>Los profesores son...</h3>
+
+    {% for profesor in profesores %}
+        <li> {{profesor}} </li>
+        
+    {% endfor %}
+
+{% endblock %}
