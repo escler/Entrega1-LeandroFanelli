@@ -1,16 +1,12 @@
 { {% extends 'AppCoder/padre.html' %}}
 
 {% block contenidoQueCambia %}
-
-<body>
-
-    {% if form.errors %}
-    
-        <p style="color: red;"> {{ form.errors }}</p>
-
-    {% endif %}
-
     <form action="" method="POST">{% csrf_token %}
+
+        <ul>
+            <li>Nombre: {{curso.nombre}}</li>
+            <li>Camada: {{curso.camada}}</li>
+        </ul>
 
         <table>
 
@@ -18,9 +14,11 @@
 
         </table>
 
-        <input type="submit", value="Enviar">
-    
+        <input type="submit", value="Borrar">
+
     </form>
 
-</body>
+
+
 {% endblock %}
+

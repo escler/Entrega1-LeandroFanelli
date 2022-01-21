@@ -22,8 +22,3 @@ class Profesor(Model):
     
     def __str__(self):
         return f'Profesor:{self.nombre} {self.apellido} Email: {self.email} Profesion: {self.profesion} '
-    
-class Entregable(Model):
-    nombre = CharField(max_length=30)
-    fechaDeEntrega = DateField()
-    entregado = BooleanField()

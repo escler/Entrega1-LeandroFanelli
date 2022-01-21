@@ -1,16 +1,12 @@
 from django.urls import path
 
-from AppCoder.views import buscarCamada, busquedaCamada, crear_curso, cursos, inicio, profesores, entregables, estudiantes, cursoFormulario, profesorFormulario
+from AppCoder.views import Curso_CreateView, Curso_DeleteView, Curso_DetailView, Curso_ListView, Curso_UpdateView, inicio
 
 urlpatterns = [
-    path('crear_curso/<camada>', crear_curso),
     path('', inicio, name='Inicio'),
-    path('cursos', cursos, name='Cursos'),
-    path('profesores', profesores, name='Profesores'),
-    path('entregables', entregables, name='Entregables'),
-    path('estudiantes', estudiantes, name='Estudiantes'),
-    path('cursoFormulario', cursoFormulario, name='CursoFormulario'),
-    path('profesorFormulario', profesorFormulario, name='ProfesorFormulario'),
-    path('busquedaCamada', busquedaCamada, name='BusquedaCamada'),
-    path('buscarCamada/', buscarCamada),
+    path('cursos', Curso_ListView.as_view(), name='cursos'),
+    path('cursos/add', Curso_CreateView.as_view(), name='curso_add'),
+    path('curso/update/<pk>', Curso_UpdateView.as_view(), name='curso_update'),
+    path('curso/delete/<pk>', Curso_DeleteView.as_view(), name='curso_delete'),
+    path('curso/view/<pk>', Curso_DetailView.as_view(), name='curso_view')
 ]
