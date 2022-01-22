@@ -4,8 +4,9 @@
     <form action="" method="POST">{% csrf_token %}
 
         <ul>
-            <li>Nombre: {{curso.nombre}}</li>
-            <li>Camada: {{curso.camada}}</li>
+            <li>Nombre: {{estudiante.nombre}}</li>
+            <li>Apellido: {{estudiante.apellido}}</li>
+            <li>Email: {{estudiante.email}}</li>
         </ul>
 
         <table>
@@ -17,8 +18,6 @@
         <input type="submit", value="Borrar">
 
     </form>
-
-
 
 {% endblock %}
 

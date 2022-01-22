@@ -1,8 +1,8 @@
-{ {% extends 'AppCoder/padre.html' %}}
+{% extends 'AppCoder/padre.html' %}
 
 {% block contenidoQueCambia %}
-
-    <h3>Los Cursos son: <h3>
+    <h2><a href="{% url 'BuscarCurso'%}">Busqueda Avanzada</a></h2>
+    <h4>Los Cursos son: <h4>
         {%for curso in cursos%}
             {{curso}}
             <a href="{% url 'curso_view' curso.id %}">Detalle</a>

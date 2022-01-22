@@ -4,8 +4,10 @@
     <form action="" method="POST">{% csrf_token %}
 
         <ul>
-            <li>Nombre: {{curso.nombre}}</li>
-            <li>Camada: {{curso.camada}}</li>
+            <li>Nombre: {{profesor.nombre}}</li>
+            <li>Apellido: {{profesor.apellido}}</li>
+            <li>Email: {{profesor.email}}</li>
+            <li>Profesion: {{profesor.profesion}}</li>
         </ul>
 
         <table>
@@ -18,7 +20,4 @@
 
     </form>
 
-
-
 {% endblock %}
-
